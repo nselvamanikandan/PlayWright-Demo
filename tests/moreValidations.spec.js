@@ -20,3 +20,20 @@ test('Validate form fields',async({page})=>{
 
 
 })
+
+test('Validate Screenshot',async({page})=>{
+
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/')
+    await expect(page.locator('#displayed-text')).toBeVisible()
+    await page.locator('#hide-textbox').click()
+    await page.screenshot({path:'screenshot.png'})
+
+})
+
+test.only('Validate Visual testing',async({page})=>{
+
+    await page.goto('https://www.stable.work/')
+    expect(await page.screenshot()).toMatchSnapshot('Screenshot1.png')
+
+
+})
