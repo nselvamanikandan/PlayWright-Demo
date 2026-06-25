@@ -1,8 +1,7 @@
-//const{test, expect} =require('@playwright/test');
 import {test, expect} from '@playwright/test'
 const { text } = require('node:stream/consumers');
-//const { POmanager } = require('../pageObjects/POmanager');
 import {POmanager} from '../pageObjects/POmanager'
+import {OrderSuccessPage} from '../pageObjects/OrderSuccessPage'
 
 
 test('Verify Google homepage url',async({page})=>{
@@ -45,6 +44,7 @@ test.only('Client Login App',async({page}) => {
     const email = "nselvamanikandan@gmail.com"
     const password = "Test@1234567"
     const productName = "ZARA COAT 3"
+   
  
  
     const loginPage = poManager.getLoginPage()
@@ -58,67 +58,51 @@ test.only('Client Login App',async({page}) => {
     await dashboardPage.searchProductAddtoCart(productName)
     await dashboardPage.navigateToCart()
 
-    const cartPage = poManager.getCartPage( )
+    const cartPage = poManager.getCartPage()
     await cartPage.verifyProductDisplay(productName)
     await cartPage.clickCheckout()
 
-    
-    //  await page.locator('div li').first().waitFor()
-    //  await expect(page.locator("h3:has-text('ZARA COAT 3')")).toBeVisible()
-    //  await page.locator('text=Checkout').click()
+    const checkoutPage = poManager.getCheckoutPage()
+    await checkoutPage.fillPersonalDetails('4111111111111111','11','15','N Selva Manikandan','123','rahulshettyacademy')
+    await checkoutPage.validateCouponSuccess()
+    await checkoutPage.fillShippingDetails('India')
+    await checkoutPage.placeOrderBtn.click()
+
+    const orderSuccessPage = poManager.getOrderSuccessPage()
+    // Step 1: verify success and capture order number
+    const order =await orderSuccessPage.verifyOrderSuccessMsg()
+    // Step 2: navigate to Orders page
+    await orderSuccessPage.navigateToOrdersPage()
+    // Step 3: validate order number in Orders page
+    const myOrdersPage = poManager.getMyOrdersPage()
+    await myOrdersPage.validateOrderID(order)
+
+  
+   
 
 
-//      await page.locator("[placeholder*='Country']").pressSequentially('Ind')
-//      const dropdown = page.locator('.ta-results')
-//      await dropdown.waitFor()
-//      const ddCount = await dropdown.locator('button').count()
-//      for(let i=0;i<ddCount;++i)
-//      {
-//         const text = await dropdown.locator('button').nth(i).textContent()
-//         if(text.trim() === 'India'){
-//             await dropdown.locator('button').nth(i).click()
-//             break;
-//         }
+   
 
 
-//     }
-//      await expect(page.locator('.user__name  label')).toHaveText(email)
-//      await page.locator('.ng-untouched input').first().fill('1111 2222 3333 4444')
-//     await page.locator('.ng-untouched select').first().selectOption('03')
-//      await page.locator('.ng-untouched select').last().selectOption('15')
-//      await page.locator('.ng-untouched input').nth(2).fill('Selvamanikandan')
-//      await page.locator('.ng-untouched input').nth(1).fill('123')
-//      await page.locator('.ng-untouched input').last().fill('rahulshettyacademy')
-//      await page.locator('.btn-primary').click()
-//      await CouponSuccess.waitFor()
-//      await expect(CouponSuccess).toHaveText('* Coupon Applied')
-//      const PlaceOrderBtn = page.locator('.payment__shipping a')
-//      const enabled = await PlaceOrderBtn.isEnabled()
-//      console.log(enabled)
-//      await PlaceOrderBtn.click()
-//      await expect(page.locator('.hero-primary')).toHaveText(' Thankyou for the order. ')
-//      const orderID = await page.locator('.em-spacer-1 label').last().textContent()
-//     console.log(orderID)
-//    const order = orderID.replaceAll('|','').trim()
-//    console.log(order)
+ 
      
-//      await page.locator("[routerlink*='myorders']").first().click()
 
-//       const orderidList = await page.locator('tbody tr th')
-//       await orderidList.last().waitFor()
-//       const orderCount = await orderidList.count()
-//          for(let i=0;i<orderCount;++i)
-//     {
-//         const text =await page.locator('tbody tr th').nth(i).textContent()
-//         console.log(text)
-//         if(text.trim() === order){
-//             console.log('Order ID matched')
-//             await page.locator('td button.btn-primary').nth(i).click()
-//             break;
-//         }
 
-//      }
-//        await expect(page.locator('div.-main')).toContainText(order)
+    //   const orderidList = await page.locator('tbody tr th')
+    //   await orderidList.last().waitFor()
+    //   const orderCount = await orderidList.count()
+    //      for(let i=0;i<orderCount;++i)
+    // {
+    //     const text =await page.locator('tbody tr th').nth(i).textContent()
+    //     console.log(text)
+    //     if(text.trim() === order){
+    //         console.log('Order ID matched')
+    //         await page.locator('td button.btn-primary').nth(i).click()
+    //         break;
+    //     }
+
+    //  }
+    //    await expect(page.locator('div.-main')).toContainText(order)
 
 
 

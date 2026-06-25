@@ -1,5 +1,5 @@
 import {expect} from '@playwright/test'
-class Cartpage{
+class CartPage{
 
     constructor(page){
         this.page=page;
@@ -23,4 +23,4 @@ async clickCheckout(){
 
 
 }
-module.exports={Cartpage}
+module.exports={CartPage}
