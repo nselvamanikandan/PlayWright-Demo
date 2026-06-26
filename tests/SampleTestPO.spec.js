@@ -1,65 +1,63 @@
 import {test, expect} from '@playwright/test'
 const { text } = require('node:stream/consumers');
-import {POmanager} from '../pageObjects/POmanager'
+import {POmanager} from '../pageObjects/POmanager' 
 import {OrderSuccessPage} from '../pageObjects/OrderSuccessPage'
+const dataset = JSON.parse(JSON.stringify(require('../utils/placeOrderTestData.json')))
 
 
-test('Verify Google homepage url',async({page})=>{
-    await page.goto('https://www.google.com/')
-    await expect(page).toHaveURL('https://www.google.com/')
-    console.log('URL is correct '+page.url())
-})
+// test('Verify Google homepage url',async({page})=>{
+//     await page.goto('https://www.google.com/')
+//     await expect(page).toHaveURL('https://www.google.com/')
+//     console.log('URL is correct '+page.url())
+// })
 
-test('Verify Rahul Shetty Academy Login',async({page})=>{
+// test('Verify Rahul Shetty Academy Login',async({page})=>{
      
-    const Username= page.locator('#username')
-    const Password= page.locator('#password')
-    const SignInBtn= page.locator('#signInBtn')
-    const CardTitles= page.locator('.card-body a')
+//     const Username= page.locator('#username')
+//     const Password= page.locator('#password')
+//     const SignInBtn= page.locator('#signInBtn')
+//     const CardTitles= page.locator('.card-body a')
 
     
-    await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
-    await expect(page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy')
-    console.log(await page.title())
-    await Username.fill('rahulshettyacademy')
-    await Password.fill('12345678')
-    await SignInBtn.click()
-    console.log(await page.locator("[style*='block']").textContent())
-    await expect(page.locator("[style*='block']")).toContainText('Incorrect')
+//     await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
+//     await expect(page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy')
+//     console.log(await page.title())
+//     await Username.fill('rahulshettyacademy')
+//     await Password.fill('12345678')
+//     await SignInBtn.click()
+//     console.log(await page.locator("[style*='block']").textContent())
+//     await expect(page.locator("[style*='block']")).toContainText('Incorrect')
     
-    await Username.clear()
-    await Username.fill('rahulshettyacademy')
-    await Password.fill('Learning@830$3mK2')
-    await SignInBtn.click()
-   console.log( await CardTitles.first().textContent())
-   console.log( await CardTitles.nth(1).textContent())
-   const Alltextcontents = await CardTitles.allTextContents()
-   console.log(Alltextcontents)
+//     await Username.clear()
+//     await Username.fill('rahulshettyacademy')
+//     await Password.fill('Learning@830$3mK2')
+//     await SignInBtn.click()
+//    console.log( await CardTitles.first().textContent())
+//    console.log( await CardTitles.nth(1).textContent())
+//    const Alltextcontents = await CardTitles.allTextContents()
+//    console.log(Alltextcontents)
 
-})
+// })
 
-test.only('Client Login App',async({page}) => {
+
+for (const data of dataset) {
+test(`Client Login App - ${data.productName}`, async ({ page }) => {
 
     const poManager = new POmanager(page)
-    const email = "nselvamanikandan@gmail.com"
-    const password = "Test@1234567"
-    const productName = "ZARA COAT 3"
-   
- 
- 
+
     const loginPage = poManager.getLoginPage()
     await loginPage.loadUrl('https://rahulshettyacademy.com/client/#/auth/login')
     console.log(await page.title())
     await expect(page).toHaveTitle("Let's Shop")
-    await loginPage.validLogin(email,password)
+    await loginPage.validLogin(data.email,data.password)
 
     //await page.waitForLoadState('networkidle')
     const dashboardPage = poManager.getDashboardPage()
-    await dashboardPage.searchProductAddtoCart(productName)
+    await dashboardPage.searchProductAddtoCart(data.productName)
     await dashboardPage.navigateToCart()
 
     const cartPage = poManager.getCartPage()
-    await cartPage.verifyProductDisplay(productName)
+    await cartPage.verifyProductDisplay(data.productName)
     await cartPage.clickCheckout()
 
     const checkoutPage = poManager.getCheckoutPage()
@@ -78,82 +76,55 @@ test.only('Client Login App',async({page}) => {
     await myOrdersPage.validateOrderID(order)
 
   
-   
-
-
-   
-
-
- 
-     
-
-
-    //   const orderidList = await page.locator('tbody tr th')
-    //   await orderidList.last().waitFor()
-    //   const orderCount = await orderidList.count()
-    //      for(let i=0;i<orderCount;++i)
-    // {
-    //     const text =await page.locator('tbody tr th').nth(i).textContent()
-    //     console.log(text)
-    //     if(text.trim() === order){
-    //         console.log('Order ID matched')
-    //         await page.locator('td button.btn-primary').nth(i).click()
-    //         break;
-    //     }
-
-    //  }
-    //    await expect(page.locator('div.-main')).toContainText(order)
-
-
-
 
 
 })
+}
 
-test('Test UI controls',async({page}) => {
+// test('Test UI controls',async({page}) => {
 
-    const Username= page.locator('#username')
-    const Password= page.locator('#password')
-    const Dropdown= page.locator('select.form-control')
-    const radioBtn= page.locator('.radiotextsty')
-    const chckbox= page.locator('#terms')
-    const webpopup= page.locator('#okayBtn')
-    const blinklink= page.locator("[href*='documents-request']")
+//     const Username= page.locator('#username')
+//     const Password= page.locator('#password')
+//     const Dropdown= page.locator('select.form-control')
+//     const radioBtn= page.locator('.radiotextsty')
+//     const chckbox= page.locator('#terms')
+//     const webpopup= page.locator('#okayBtn')
+//     const blinklink= page.locator("[href*='documents-request']")
 
-   await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
-   await Dropdown.selectOption('consult')
-   await radioBtn.last().click()
-   await webpopup.click()
-   await expect(radioBtn.last()).toBeChecked()
-   await chckbox.click()
-   await expect(blinklink).toHaveAttribute('class','blinkingText')
+//    await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
+//    await Dropdown.selectOption('consult')
+//    await radioBtn.last().click()
+//    await webpopup.click()
+//    await expect(radioBtn.last()).toBeChecked()
+//    await chckbox.click()
+//    await expect(blinklink).toHaveAttribute('class','blinkingText')
 
-})
+// })
 
-test('Test Child Windows handle',async({ browser }) => {
+// test('Test Child Windows handle',async({ browser }) => {
 
 
-    const context = await browser.newContext()
-    const page = await context.newPage()
-    const blinklink= page.locator("[href*='documents-request']")
-    const Username= page.locator('#username')
+//     const context = await browser.newContext()
+//     const page = await context.newPage()
+//     const blinklink= page.locator("[href*='documents-request']")
+//     const Username= page.locator('#username')
 
-       await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
+//        await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
       
-       const [newPage] = await Promise.all([
-        context.waitForEvent('page'),
-        blinklink.click(),
-       ])
+//        const [newPage] = await Promise.all([
+//         context.waitForEvent('page'),
+//         blinklink.click(),
+//        ])
 
-       const text =await newPage.locator('.red').textContent()
-       console.log(text)
-       const domainText = text.split('@')[1].split(' ')[0].split('.')[0]
-         console.log(domainText)
-         await page.locator('#username').fill(domainText)
-         console.log(await page.locator('#username').inputValue())
-         await page.pause()
-
-
+//        const text =await newPage.locator('.red').textContent()
+//        console.log(text)
+//        const domainText = text.split('@')[1].split(' ')[0].split('.')[0]
+//          console.log(domainText)
+//          await page.locator('#username').fill(domainText)
+//          console.log(await page.locator('#username').inputValue())
+//          await page.pause()
 
 
-})
+
+
+// })

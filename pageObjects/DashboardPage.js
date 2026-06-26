@@ -5,7 +5,7 @@ class DashboardPage {
     constructor(page) {
         this.page = page;
         this.products = page.locator('.card-body');
-        this.ProductName = page.locator('ZARA COAT 3');
+        //this.ProductName = page.locator('ZARA COAT 3');
         this.cart = page.locator("[routerlink*='cart']");
     }
 
