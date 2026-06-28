@@ -1,5 +1,6 @@
 const {test,expect}= require('@playwright/test')
 
+//test.describe.configure({mode: 'parallel'})
 test('Validate form fields',async({page})=>{
 
     
@@ -30,7 +31,7 @@ test('Validate Screenshot',async({page})=>{
 
 })
 
-test.only('Validate Visual testing',async({page})=>{
+test('Validate Visual testing',async({page})=>{
 
     await page.goto('https://www.stable.work/')
     expect(await page.screenshot()).toMatchSnapshot('Screenshot1.png')

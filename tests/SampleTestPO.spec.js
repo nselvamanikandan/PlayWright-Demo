@@ -5,11 +5,11 @@ import {OrderSuccessPage} from '../pageObjects/OrderSuccessPage'
 const dataset = JSON.parse(JSON.stringify(require('../utils/placeOrderTestData.json')))
 
 
-// test('Verify Google homepage url',async({page})=>{
-//     await page.goto('https://www.google.com/')
-//     await expect(page).toHaveURL('https://www.google.com/')
-//     console.log('URL is correct '+page.url())
-// })
+test('@Smoke Verify Google homepage url',async({page})=>{
+    await page.goto('https://www.google.com/')
+    await expect(page).toHaveURL('https://www.google.com/')
+    console.log('URL is correct '+page.url())
+})
 
 // test('Verify Rahul Shetty Academy Login',async({page})=>{
      
@@ -41,7 +41,7 @@ const dataset = JSON.parse(JSON.stringify(require('../utils/placeOrderTestData.j
 
 
 for (const data of dataset) {
-test(`Client Login App - ${data.productName}`, async ({ page }) => {
+test(`@Smoke Client Login App - ${data.productName}`, async ({ page }) => {
 
     const poManager = new POmanager(page)
 

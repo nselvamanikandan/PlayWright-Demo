@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","19793","@Smoke Client Login App - ZARA COAT 3","chromium","2026-06-29","passed","2026-06-29","","SampleTestPO.spec.js","",""
+"","7406","@Smoke Verify Google homepage url","chromium","2026-06-29","passed","2026-06-29","","SampleTestPO.spec.js","",""
+"","22231","@Smoke Client Login App - ADIDAS ORIGINAL","chromium","2026-06-29","passed","2026-06-29","","SampleTestPO.spec.js","",""
