@@ -1,0 +1,318 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - generic [ref=e6]:
+        - link "logo" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e9]
+        - generic [ref=e10]:
+          - link "Why Stable?" [ref=e11] [cursor=pointer]:
+            - /url: /why-stable
+          - link "Pricing" [ref=e12] [cursor=pointer]:
+            - /url: /pricing
+          - link "Become a Sales Rep" [ref=e13] [cursor=pointer]:
+            - /url: /become-sales-rep
+        - generic [ref=e14]:
+          - button "Sign Up" [ref=e15] [cursor=pointer]:
+            - link "Sign Up" [ref=e17]:
+              - /url: /signup
+          - button "Schedule Demo" [ref=e18] [cursor=pointer]:
+            - link "Schedule Demo" [ref=e20]:
+              - /url: /schedule-a-demo
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - 'heading "Stable: The Next-Generation Sales Platform" [level=2] [ref=e25]':
+          - text: "Stable:"
+          - generic [ref=e26]: The Next-Generation
+          - text: Sales Platform
+        - link "Schedule Demo" [ref=e28] [cursor=pointer]:
+          - /url: /schedule-a-demo
+      - 'img "Stable: The Next-Generation Sales Platform" [ref=e31]'
+    - generic [ref=e32]:
+      - heading "Discover our solutions" [level=2] [ref=e33]
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - heading "Hiring" [level=3] [ref=e37]
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - generic [ref=e41]:
+                - generic [ref=e42]:
+                  - img "Talent Marketplace" [ref=e44]
+                  - heading "Talent Marketplace" [level=3] [ref=e45]
+                - heading "When it comes to sales, our freelancers are highly skilled in key areas such as cold calling, LinkedIn outreach, and account management." [level=4] [ref=e46]
+              - generic [ref=e47]:
+                - link "Learn more" [ref=e48] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e49]
+                - link "Pricing details" [ref=e51] [cursor=pointer]:
+                  - /url: /pricing
+            - generic [ref=e52]:
+              - generic [ref=e53]:
+                - generic [ref=e54]:
+                  - img "Smart Candidate Sandboxing" [ref=e56]
+                  - heading "Smart Candidate Sandboxing" [level=3] [ref=e57]
+                - heading "Our candidate sandboxing feature allows you to test freelancers before committing to full-time hires." [level=4] [ref=e58]
+              - generic [ref=e59]:
+                - link "Learn more" [ref=e60] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e61]
+                - link "Pricing details" [ref=e63] [cursor=pointer]:
+                  - /url: /pricing
+        - generic [ref=e64]:
+          - heading "Lead Gen" [level=3] [ref=e66]
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - generic [ref=e71]:
+                  - img "Outbound Campaigns" [ref=e73]
+                  - heading "Outbound Campaigns" [level=3] [ref=e74]
+                - heading "Stable provides dynamic playbooks that adapt to your sales processes, empowering your team at every stage of the sales cycle." [level=4] [ref=e75]
+              - generic [ref=e76]:
+                - link "Learn more" [ref=e77] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e78]
+                - link "Pricing details" [ref=e80] [cursor=pointer]:
+                  - /url: /pricing
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - generic [ref=e83]:
+                  - img "LinkedIn Account Management" [ref=e85]
+                  - heading "LinkedIn Account Management" [level=3] [ref=e86]
+                - heading "Grow your network, engage strategically, schedule content, and track performance. Unlock qualified leads and optimize your impact." [level=4] [ref=e87]
+              - generic [ref=e88]:
+                - link "Learn more" [ref=e89] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e90]
+                - link "Pricing details" [ref=e92] [cursor=pointer]:
+                  - /url: /pricing
+        - generic [ref=e93]:
+          - heading "GTM Strategy" [level=3] [ref=e95]
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - generic [ref=e100]:
+                  - img "Outbound" [ref=e102]
+                  - heading "Outbound" [level=3] [ref=e103]
+                - heading "Drive targeted campaigns, optimize outreach, and accelerate growth. Unlock your sales potential and achieve remarkable results." [level=4] [ref=e104]
+              - generic [ref=e105]:
+                - link "Learn more" [ref=e106] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e107]
+                - link "Pricing details" [ref=e109] [cursor=pointer]:
+                  - /url: /pricing
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - generic [ref=e112]:
+                  - img "Socials" [ref=e114]
+                  - heading "Socials" [level=3] [ref=e115]
+                - heading "Drive connections, amplify brand presence, and engage your target audience. Unleash the power of social media for remarkable campaign results." [level=4] [ref=e116]
+              - generic [ref=e117]:
+                - link "Learn more" [ref=e118] [cursor=pointer]:
+                  - /url: /why-stable
+                  - heading "Learn more" [level=4] [ref=e119]
+                - link "Pricing details" [ref=e121] [cursor=pointer]:
+                  - /url: /pricing
+    - generic [ref=e124]:
+      - generic [ref=e125]:
+        - heading "Trusted by Reputable Companies and Industry Leaders" [level=2] [ref=e126]
+        - heading "Our network of talented sales professionals has successfully collaborated with renowned companies across various sectors, including:" [level=4] [ref=e127]
+      - img "logos" [ref=e129]
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - img "CEO" [ref=e137]
+              - generic [ref=e138]:
+                - heading "CEO" [level=4] [ref=e139]
+                - heading "Enterprise Software Company" [level=6] [ref=e140]
+            - heading "Before finding Stable, we had a negative experience with another lead gen company. The personal time and attention Stable gave us during our onboarding and campaign launch was fantastic! Stable's biggest differentiator is their large talent pool of experienced B2B SaaS sales reps. In a very short period of time, we've onboarded 4 BDRs who have already made a few thousand calls and seem to be a perfect fit for us. We are all looking forward to the great things we'll do together in the future." [level=4] [ref=e141]
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - img "Co-Founder" [ref=e145]
+              - generic [ref=e146]:
+                - heading "Co-Founder" [level=4] [ref=e147]
+                - heading "Software Company" [level=6] [ref=e148]
+            - heading "Stable has been a critical addition to our sales effort. It was an obvious choice for us over the next best alternative of building our own SDR team internally. The model has allowed us to iterate faster, learn what we need in an SDR, and access talent that might have been difficult to find otherwise. Stable has been more cost-efficient, more effective, and easier to manage than any alternative we considered. As first-time SaaS founders, Stable has been a game changer for us." [level=4] [ref=e149]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - img "CEO" [ref=e154]
+              - generic [ref=e155]:
+                - heading "CEO" [level=4] [ref=e156]
+                - heading "Financial Technology Company" [level=6] [ref=e157]
+            - heading "Before Stable, I faced challenges with finding, hiring, training, and managing sales representatives for our company. Stable not only guided us through the process of preparing our ideal customer profile and strategic messaging but also connected us with a dozen qualified candidates. Since launching our sales campaign, their platform provides the necessary tools for managing my sales reps and the process itself. Just five days post-launch, we have already arranged 7 meetings with qualified leads. I would highly recommend the Stable platform for those looking to efficiently establish a repeatable sales process." [level=4] [ref=e158]
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - img "Sales Resident" [ref=e162]
+              - generic [ref=e163]:
+                - heading "Sales Resident" [level=4] [ref=e164]
+                - heading "Venture Capital Firm" [level=6] [ref=e165]
+            - heading "One of our portfolio companies has been testing Stable and it's working well for them, which is great news. Thanks for the support." [level=4] [ref=e166]
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - img "CEO" [ref=e171]
+              - generic [ref=e172]:
+                - heading "CEO" [level=4] [ref=e173]
+                - heading "Healthcare Technology Company" [level=6] [ref=e174]
+            - heading "Getting onboarded with Stable was seamless and the quality of the tools provided were impressive. The team took the time to understand our business and effectively communicated our value to potential customers. Our conversion from sales call to meeting was excellent, and our sales funnel experienced growth beyond what we could have achieved independently. We were very impressed with Stable's professionalism and we look forward to further engagement." [level=4] [ref=e175]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img "Marketing Director" [ref=e179]
+              - generic [ref=e180]:
+                - heading "Marketing Director" [level=4] [ref=e181]
+                - heading "Medical Technology Company" [level=6] [ref=e182]
+            - heading "I've had the pleasure of working with Stable twice now at two different companies. For anyone considering outsourcing lead generation, I couldn't recommend them more. They're honest and committed to successful outcomes for their clients, and their approach is definitely worth considering" [level=4] [ref=e183]
+    - generic [ref=e186]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e187]
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - button "What sets Stable apart from other sales talent marketplaces?" [ref=e191] [cursor=pointer]:
+            - heading "What sets Stable apart from other sales talent marketplaces?" [level=4] [ref=e193]
+            - img [ref=e196]
+          - button "Can I customize my pricing plan based on my specific business needs?" [ref=e199] [cursor=pointer]:
+            - heading "Can I customize my pricing plan based on my specific business needs?" [level=4] [ref=e201]
+            - img [ref=e204]
+          - button "How does the candidate sandboxing feature work?" [ref=e207] [cursor=pointer]:
+            - heading "How does the candidate sandboxing feature work?" [level=4] [ref=e209]
+            - img [ref=e212]
+        - generic [ref=e214]:
+          - button "What is included in the outbound strategy?" [ref=e216] [cursor=pointer]:
+            - heading "What is included in the outbound strategy?" [level=4] [ref=e218]
+            - img [ref=e221]
+          - button "Can I integrate Stable with my existing CRM and other tools?" [ref=e224] [cursor=pointer]:
+            - heading "Can I integrate Stable with my existing CRM and other tools?" [level=4] [ref=e226]
+            - img [ref=e229]
+          - button "How can I trust the quality of your sales talent?" [ref=e232] [cursor=pointer]:
+            - heading "How can I trust the quality of your sales talent?" [level=4] [ref=e234]
+            - img [ref=e237]
+    - generic [ref=e239]:
+      - generic [ref=e240]:
+        - generic [ref=e241]:
+          - img "Unlock Your Sales Potential Today" [ref=e243]
+          - heading "Unlock Your Sales Potential Today" [level=2] [ref=e245]:
+            - text: Unlock Your Sales
+            - text: Potential Today
+          - heading "Choose Stable for our flexible pricing, tailored solutions, expertise in key sales areas, cost-effective trial period, intelligent matching, AI-powered insights, dynamic playbooks, seamless integrations, and a network of trusted sales professionals." [level=4] [ref=e247]
+        - link "Request a Demo" [ref=e249] [cursor=pointer]:
+          - /url: /schedule-a-demo
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - img "Ready to Start Your Freelancing Journey?" [ref=e253]
+          - heading "Ready to Start Your Freelancing Journey?" [level=2] [ref=e255]:
+            - text: Ready to Start Your
+            - text: Freelancing Journey?
+          - heading "Take the first step towards building a successful freelance career and achieving your professional aspirations today. Take the first step towards building a successful freelance career and achieving your professional aspirations today." [level=4] [ref=e257]
+        - link "Become a freelancer" [ref=e259] [cursor=pointer]:
+          - /url: /signup/sales-representative
+  - generic [ref=e260]:
+    - generic [ref=e261]:
+      - generic [ref=e262]:
+        - link "logo" [ref=e264] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e265]
+        - generic [ref=e266]:
+          - link "facebook" [ref=e267] [cursor=pointer]:
+            - /url: https://www.facebook.com/stableworkhq/
+            - img "facebook" [ref=e269]
+          - link "instagram" [ref=e270] [cursor=pointer]:
+            - /url: https://www.instagram.com/buildyourstable/
+            - img "instagram" [ref=e272]
+          - link "linkedin" [ref=e273] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/stablework
+            - img "linkedin" [ref=e275]
+      - generic [ref=e276]:
+        - link "About" [ref=e277] [cursor=pointer]:
+          - /url: /about
+          - heading "About" [level=4] [ref=e278]
+        - link "Privacy" [ref=e279] [cursor=pointer]:
+          - /url: https://www.termsfeed.com/privacy-policy/9c22f02748996d324e09de417f5727f9
+          - heading "Privacy" [level=4] [ref=e280]
+        - link "Terms" [ref=e281] [cursor=pointer]:
+          - /url: https://www.termsfeed.com/terms-conditions/ebcb019da991129ebc28d28149f041a1
+          - heading "Terms" [level=4] [ref=e282]
+        - link "Contact" [ref=e283] [cursor=pointer]:
+          - /url: /contact-us
+          - heading "Contact" [level=4] [ref=e284]
+        - link "Case Studies" [ref=e285] [cursor=pointer]:
+          - /url: /case-study
+          - heading "Case Studies" [level=4] [ref=e286]
+        - link "Official Store" [ref=e287] [cursor=pointer]:
+          - /url: https://shop.stable.work/
+          - heading "Official Store" [level=4] [ref=e288]
+        - link "Leaderboard" [ref=e289] [cursor=pointer]:
+          - /url: /leaderboard
+          - heading "Leaderboard" [level=4] [ref=e290]
+        - link "Login" [ref=e291] [cursor=pointer]:
+          - /url: https://app.stable.work/login
+          - heading "Login" [level=4] [ref=e292]
+      - generic [ref=e293]:
+        - link "Glossary" [ref=e294] [cursor=pointer]:
+          - /url: /glossary
+          - heading "Glossary" [level=4] [ref=e295]
+        - link "Sales Development Rep" [ref=e296] [cursor=pointer]:
+          - /url: /glossary#s
+          - heading "Sales Development Rep" [level=4] [ref=e297]
+        - link "Business Development Rep" [ref=e298] [cursor=pointer]:
+          - /url: /glossary#b
+          - heading "Business Development Rep" [level=4] [ref=e299]
+        - link "Account Executive" [ref=e300] [cursor=pointer]:
+          - /url: /glossary#a
+          - heading "Account Executive" [level=4] [ref=e301]
+        - link "Account Managers" [ref=e302] [cursor=pointer]:
+          - /url: /glossary#a
+          - heading "Account Managers" [level=4] [ref=e303]
+        - link "Sales Enablement Tech" [ref=e304] [cursor=pointer]:
+          - /url: /glossary#s
+          - heading "Sales Enablement Tech" [level=4] [ref=e305]
+        - link "Ideal Customer Profile" [ref=e306] [cursor=pointer]:
+          - /url: /glossary#i
+          - heading "Ideal Customer Profile" [level=4] [ref=e307]
+        - link "B2B Databases" [ref=e308] [cursor=pointer]:
+          - /url: /glossary#b
+          - heading "B2B Databases" [level=4] [ref=e309]
+        - link "Business-to-business" [ref=e310] [cursor=pointer]:
+          - /url: /glossary#b
+          - heading "Business-to-business" [level=4] [ref=e311]
+      - generic [ref=e312]:
+        - link "Prospect Lists" [ref=e313] [cursor=pointer]:
+          - /url: /glossary#p
+          - heading "Prospect Lists" [level=4] [ref=e314]
+        - link "Turnover" [ref=e315] [cursor=pointer]:
+          - /url: /glossary#t
+          - heading "Turnover" [level=4] [ref=e316]
+        - link "Hiring Cycle" [ref=e317] [cursor=pointer]:
+          - /url: /glossary#h
+          - heading "Hiring Cycle" [level=4] [ref=e318]
+        - link "Call-to-Action" [ref=e319] [cursor=pointer]:
+          - /url: /glossary#c
+          - heading "Call-to-Action" [level=4] [ref=e320]
+        - link "AI Sales Tools" [ref=e321] [cursor=pointer]:
+          - /url: /glossary#a
+          - heading "AI Sales Tools" [level=4] [ref=e322]
+        - link "Sales Qualified Leads" [ref=e323] [cursor=pointer]:
+          - /url: /glossary#s
+          - heading "Sales Qualified Leads" [level=4] [ref=e324]
+        - link "Marketing Qualified Leads" [ref=e325] [cursor=pointer]:
+          - /url: /glossary#m
+          - heading "Marketing Qualified Leads" [level=4] [ref=e326]
+        - link "CRM" [ref=e327] [cursor=pointer]:
+          - /url: /glossary#c
+          - heading "CRM" [level=4] [ref=e328]
+      - generic [ref=e329]:
+        - heading "Tools & Resources" [level=4] [ref=e330]
+        - link "Curated Content" [ref=e331] [cursor=pointer]:
+          - /url: /curated-content
+          - heading "Curated Content" [level=4] [ref=e332]
+        - link "Sales Playbooks" [ref=e333] [cursor=pointer]:
+          - /url: /playbooks
+          - heading "Sales Playbooks" [level=4] [ref=e334]
+        - link "AI Sales Tools" [ref=e335] [cursor=pointer]:
+          - /url: /sales-asset-generation
+          - heading "AI Sales Tools" [level=4] [ref=e336]
+    - heading "© 2026 Stable. All rights reserved." [level=6] [ref=e338]
+```

@@ -141,7 +141,7 @@ test(' Single ticket booking is eligible for refund',async({page})=>{
 })
 
 
-test.only('Multiple ticket booking is not eligible for refund',async({page})=>{
+test('Multiple ticket booking is not eligible for refund',async({page})=>{
 
 
     const bookingCards =await page.locator('#booking-card')

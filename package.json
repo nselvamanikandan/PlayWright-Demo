@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression": "npx playwright test",
+    "smoke": "npx playwright test --grep @Smoke --headed --project=Chromium",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "html-report":"npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
